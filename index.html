@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>АУРА — Lounge • Hookah • Bar</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #090a0c;
+      --card: #15171a;
+      --card2: #1b1d20;
+      --text: #e4e0db;
+      --soft: #c4beb7;
+      --muted: #817b75;
+      --accent: #a99b8d;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 20% 10%, #1a1c20 0%, transparent 30%),
+        radial-gradient(circle at 80% 40%, #15171a 0%, transparent 35%),
+        var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: min(100%, 600px);
+      margin: auto;
+      padding: 24px 18px 50px;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 0 35px;
+    }
+
+    .logo {
+      font-size: 38px;
+      font-weight: 300;
+      letter-spacing: 12px;
+      margin-left: 12px;
+    }
+
+    .subtitle {
+      margin-top: 12px;
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--muted);
+    }
+
+    .divider {
+      width: 80px;
+      height: 1px;
+      background: var(--accent);
+      margin: 24px auto 0;
+      opacity: 0.5;
+    }
+
+    .menu-nav {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 38px;
+    }
+
+    .nav-button {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 17px 18px;
+      background: linear-gradient(135deg, var(--card), var(--card2));
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 16px;
+      color: var(--text);
+      text-decoration: none;
+      transition: 0.25s;
+    }
+
+    .nav-button:active {
+      transform: scale(0.98);
+    }
+
+    .nav-icon {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #0d0f11;
+      color: var(--accent);
+      font-size: 21px;
+    }
+
+    .nav-title {
+      font-size: 15px;
+      letter-spacing: 1.5px;
+    }
+
+    .section {
+      padding-top: 24px;
+      margin-bottom: 42px;
+      scroll-margin-top: 10px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin-bottom: 25px;
+      font-size: 18px;
+      font-weight: 400;
+      letter-spacing: 4px;
+    }
+
+    .section-icon {
+      color: var(--accent);
+      font-size: 23px;
+    }
+
+    .group {
+      margin-bottom: 30px;
+    }
+
+    .group-title {
+      color: var(--accent);
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .item {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .item-main {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      align-items: baseline;
+    }
+
+    .name {
+      color: var(--soft);
+      font-size: 15px;
+      font-weight: 300;
+    }
+
+    .price {
+      color: var(--text);
+      font-size: 15px;
+      white-space: nowrap;
+    }
+
+    .details {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .smoke-card {
+      background: linear-gradient(135deg, #111315, #1b1d20);
+      border-radius: 18px;
+      padding: 18px;
+      margin-bottom: 10px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 9px;
+      letter-spacing: 2px;
+    }
+
+    @media (min-width: 700px) {
+      .container {
+        padding-top: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <header>
+    <div class="logo">АУРА</div>
+    <div class="subtitle">LOUNGE • HOOKAH • BAR</div>
+    <div class="divider"></div>
+  </header>
+
+  <nav class="menu-nav">
+    <a href="#spirits" class="nav-button">
+      <div class="nav-icon">🥃</div>
+      <div class="nav-title">КРЕПКИЙ АЛКОГОЛЬ</div>
+    </a>
+
+    <a href="#wine" class="nav-button">
+      <div class="nav-icon">🍷</div>
+      <div class="nav-title">ВИНА</div>
+    </a>
+
+    <a href="#beer" class="nav-button">
+      <div class="nav-icon">🍺</div>
+      <div class="nav-title">ПИВО</div>
+    </a>
+
+    <a href="#soft" class="nav-button">
+      <div class="nav-icon">◯</div>
+      <div class="nav-title">БЕЗАЛКОГОЛЬНЫЕ НАПИТКИ</div>
+    </a>
+
+    <a href="#smoke" class="nav-button">
+      <div class="nav-icon">〰</div>
+      <div class="nav-title">ДЫМНОЕ МЕНЮ</div>
+    </a>
+  </nav>
+
+
+  <section class="section" id="spirits">
+
+    <h2 class="section-title">
+      <span class="section-icon">🥃</span>
+      КРЕПКИЙ АЛКОГОЛЬ
+    </h2>
+
+    <div class="group">
+      <div class="group-title">Виски</div>
+
+      <div class="item"><div class="item-main"><span class="name">Jameson</span><span class="price">550 ₽</span></div><div class="details">50 мл</div></div>
+      <div class="item"><div class="item-main"><span class="name">Ballantine's Finest</span><span class="price">600 ₽</span></div><div class="details">50 мл</div></div>
+      <div class="item"><div class="item-main"><span class="name">Chivas Regal 12</span><span class="price">850 ₽</span></div><div class="details">50 мл</div></div>
+      <div class="item"><div class="item-main"><span class="name">Jack Daniel's</span><span class="price">700 ₽</span></div><div class="details">50 мл</div></div>
+      <div class="item"><div class="item-main"><span class="name">Maker's Mark</span><span class="price">1 000 ₽</span></div><div class="details">50 мл</div></div>
+    </div>
+
+    <div class="group">
+      <div class="group-title">Коньяк</div>
+
+      <div class="item"><div class="item-main"><span class="name">Courvoisier VSOP</span><span class="price">1 000 ₽</span></div><div class="details">50 мл</div></div>
+      <div class="item"><div class="item-main"><span class="name">Hennessy VSOP</span><span class="price">1 200 ₽</span></div><div class="details">50 мл</div></div>
+    </div>
+
+    <div class="group">
+      <div class="group-title">Водка</div>
+
+      <div class="item"><div class="item-main"><span class="name">Beluga Noble</span><span class="price">350 ₽</span></div><div class="details">50 мл</div></div>
+      <div class="item"><div class="item-main"><span class="name">Absolut Vodka</span><span class="price">350 ₽</span></div><div class="details">50 мл</div></div>
+      <div class="item"><div class="item-main"><span class="name">Koskenkorva Original</span><span class="price">500 ₽</span></div><div class="details">50 мл</div></div>
+    </div>
+
+    <div class="group">
+      <div class="group-title">Ром</div>
+
+      <div class="item"><div class="item-main"><span class="name">Havana Club</span><span class="price">400 ₽</span></div><div class="details">50 мл</div></div>
+    </div>
+
+    <div class="group">
+      <div class="group-title">Ликёры</div>
+
+      <div class="item"><div class="item-main"><span class="name">Jägermeister</span><span class="price">450 ₽</span></div><div class="details">50 мл</div></div>
+    </div>
+
+  </section>
+
+
+  <section class="section" id="wine">
+
+    <h2 class="section-title"><span class="section-icon">🍷</span>ВИНА</h2>
+
+    <div class="group">
+      <div class="group-title">Игристые вина</div>
+
+      <div class="item"><div class="item-main"><span class="name">Tosti Asti</span><span class="price">550 ₽</span></div><div class="details">125 мл</div></div>
+      <div class="item"><div class="item-main"><span class="name">Tosti Prosecco</span><span class="price">550 ₽</span></div><div class="details">125 мл</div></div>
+      <div class="item"><div class="item-main"><span class="name">Cantiani Riesling Brut</span><span class="price">1 800 ₽</span></div><div class="details">750 мл</div></div>
+    </div>
+
+    <div class="group">
+      <div class="group-title">Красные вина</div>
+
+      <div class="item"><div class="item-main"><span class="name">Хванчкара</span><span class="price">550 ₽</span></div><div class="details">Красное полусладкое • Грузия • 125 мл</div></div>
+      <div class="item"><div class="item-main"><span class="name">Гянджа</span><span class="price">370 ₽</span></div><div class="details">Красное полусладкое • Азербайджан • 125 мл</div></div>
+      <div class="item"><div class="item-main"><span class="name">Девичья Башня</span><span class="price">390 ₽</span></div><div class="details">Красное полусухое • Азербайджан • 125 мл</div></div>
+    </div>
+
+    <div class="group">
+      <div class="group-title">Белые вина</div>
+
+      <div class="item"><div class="item-main"><span class="name">Девичья Башня</span><span class="price">380 ₽</span></div><div class="details">Белое полусухое • Азербайджан • 125 мл</div></div>
+      <div class="item"><div class="item-main"><span class="name">Садыллы</span><span class="price">400 ₽</span></div><div class="details">Белое сухое • Азербайджан • 125 мл</div></div>
+    </div>
+
+  </section>
+
+
+  <section class="section" id="beer">
+
+    <h2 class="section-title"><span class="section-icon">🍺</span>ПИВО</h2>
+
+    <div class="group">
+      <div class="group-title">Пиво</div>
+
+      <div class="item"><div class="item-main"><span class="name">Corona Extra</span><span class="price">450 ₽</span></div><div class="details">0,35 л</div></div>
+      <div class="item"><div class="item-main"><span class="name">Pilsner</span><span class="price">500 ₽</span></div><div class="details">0,5 л</div></div>
+      <div class="item"><div class="item-main"><span class="name">Heineken</span><span class="price">550 ₽</span></div><div class="details">0,5 л</div></div>
+    </div>
+
+    <div class="group">
+      <div class="group-title">Безалкогольное пиво</div>
+
+      <div class="item">
+        <div class="item-main">
+          <span class="name">Bakalář</span>
+          <span class="price">450 ₽</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="section" id="soft">
+
+    <h2 class="section-title"><span class="section-icon">◯</span>БЕЗАЛКОГОЛЬНЫЕ НАПИТКИ</h2>
+
+    <div class="group">
+      <div class="group-title">Соки</div>
+
+      <div class="item"><div class="item-main"><span class="name">Rich Вишня</span><span class="price">200 ₽</span></div><div class="details">0,2 л</div></div>
+      <div class="item"><div class="item-main"><span class="name">Rich Ананас</span><span class="price">200 ₽</span></div><div class="details">0,2 л</div></div>
+      <div class="item"><div class="item-main"><span class="name">Rich Яблоко</span><span class="price">200 ₽</span></div><div class="details">0,2 л</div></div>
+    </div>
+
+    <div class="group">
+      <div class="group-title">Газированные напитки</div>
+
+      <div class="item"><div class="item-main"><span class="name">Добрый Кола</span><span class="price">250 ₽</span></div><div class="details">0,33 л</div></div>
+      <div class="item"><div class="item-main"><span class="name">Добрый Кола Zero</span><span class="price">250 ₽</span></div><div class="details">0,33 л</div></div>
+      <div class="item"><div class="item-main"><span class="name">Добрый Лимон-Лайм</span><span class="price">250 ₽</span></div><div class="details">0,33 л</div></div>
+      <div class="item"><div class="item-main"><span class="name">Rich Indian Tonic</span><span class="price">250 ₽</span></div><div class="details">0,33 л</div></div>
+    </div>
+
+    <div class="group">
+      <div class="group-title">Вода</div>
+
+      <div class="item"><div class="item-main"><span class="name">BonAqua без газа</span><span class="price">150 ₽</span></div><div class="details">0,33 л</div></div>
+      <div class="item"><div class="item-main"><span class="name">BonAqua газированная</span><span class="price">150 ₽</span></div><div class="details">0,33 л</div></div>
+    </div>
+
+    <div class="group">
+      <div class="group-title">Чай</div>
+
+      <div class="item"><div class="item-main"><span class="name">Чайник</span><span class="price">700 ₽</span></div><div class="details">0,5 л</div></div>
+      <div class="item"><div class="item-main"><span class="name">Чайник</span><span class="price">900 ₽</span></div><div class="details">0,9 л</div></div>
+    </div>
+
+  </section>
+
+
+  <section class="section" id="smoke">
+
+    <h2 class="section-title"><span class="section-icon">〰</span>ДЫМНОЕ МЕНЮ</h2>
+
+    <div class="smoke-card">
+      <div class="item-main">
+        <span class="name">Classic</span>
+        <span class="price">2 000 ₽</span>
+      </div>
+    </div>
+
+    <div class="smoke-card">
+      <div class="item-main">
+        <span class="name">Hard</span>
+        <span class="price">2 400 ₽</span>
+      </div>
+      <div class="details">Bounce, TROFIMOFF'S</div>
+    </div>
+
+    <div class="smoke-card">
+      <div class="item-main">
+        <span class="name">Cigar</span>
+        <span class="price">2 900 ₽</span>
+      </div>
+      <div class="details">WTO</div>
+    </div>
+
+    <div class="smoke-card">
+      <div class="item-main">
+        <span class="name">Parfum</span>
+        <span class="price">3 500 ₽</span>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    AURA • LOUNGE • HOOKAH • BAR<br><br>
+    ЦЕНЫ УКАЗАНЫ В РУБЛЯХ
+  </footer>
+
+</div>
+
+</body>
+</html>
